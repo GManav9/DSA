@@ -1,5 +1,6 @@
 function union(arr1, arr2) {
   let myset = new Set();
+  let newarr = [];
 
   for (let value of arr1) {
     if (myset.has(value) == false) {
@@ -8,11 +9,12 @@ function union(arr1, arr2) {
   }
 
   for (let value of arr2) {
-    if (myset.has(value) == false) {
-      myset.add(value);
+    if (myset.has(value)) {
+      //  myset.add(value);
+      newarr.push(value);
     }
   }
 
-  console.log(myset);
+  console.log(newarr);
 }
-union([1, 2, 3], [3, 4, 5]);
+union([1, 2, 3, 4], [3, 4, 5, 6]);
